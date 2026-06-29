@@ -1,0 +1,32 @@
+# Terraform provider/module downloads (huge, machine-specific)
+**/.terraform/*
+
+# State files — MAY CONTAIN SECRETS. Never commit. (Yours live in S3 anyway.)
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Variable files that often hold secrets/credentials
+*.tfvars
+*.tfvars.json
+!example.tfvars      # but DO allow a safe example template
+
+# Plan output files (can contain sensitive values)
+*.tfplan
+
+# CLI config & sensitive overrides
+.terraformrc
+terraform.rc
+override.tf
+override.tf.json
+*_override.tf
+
+# OS / editor noise
+.DS_Store
+*.swp
+.idea/
+.vscode/
